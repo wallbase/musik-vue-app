@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <section id="app" class="vbox">
+    <Header></Header>
+    <section>
+      <section class="hbox stretch">
+        <Aside></Aside>
+        <section id="content">
+          <section class="vbox">
+            <router-view></router-view>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
-</script>
+  import Header from '@/components/commons/Header'
+  import Aside from '@/components/commons/Aside'
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  export default {
+    components: {
+      Header, Aside
+    }
+  }
+</script>
