@@ -67,14 +67,14 @@
             </section>
           </section>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+        <dropdown tag="li">
+          <a class="dropdown-toggle  bg clear" role="button">
+            <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
                 <img src="/static/images/a0.png" alt="...">
               </span>
-            John.Smith <b class="caret"></b>
+            John.Smith<span class="caret"></span>
           </a>
-          <ul class="dropdown-menu animated fadeInRight">
+          <template slot="dropdown">
             <li>
               <span class="arrow top"></span>
               <a href="#">Settings</a>
@@ -95,8 +95,8 @@
             <li>
               <a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a>
             </li>
-          </ul>
-        </li>
+          </template>
+        </dropdown>
       </ul>
     </div>
   </header>
